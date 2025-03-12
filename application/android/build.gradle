@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        google()  // Required for Firebase and other Google services
+        mavenCentral()  // General Maven repository
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4'  // Android Gradle plugin (ensure compatibility with Flutter)
+        classpath 'com.google.gms:google-services:4.3.15'  // Google Services plugin for Firebase
+    }
+}
+
+allprojects {
+    repositories {
+        google()  // Required for Firebase
+        mavenCentral()  // Maven Central repository
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

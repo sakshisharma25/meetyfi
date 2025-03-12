@@ -1,0 +1,48 @@
+plugins {
+    id "com.android.application"  // Android application plugin
+    id "kotlin-android"  // Kotlin plugin
+    id "dev.flutter.flutter-gradle-plugin"  // Flutter plugin
+}
+
+android {
+    namespace = "com.example.Meetyfi"  // The package name for the app
+    compileSdk = flutter.compileSdkVersion  // Use the Flutter-defined compile SDK version
+    ndkVersion = flutter.ndkVersion  // Use the Flutter-defined NDK version
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8  // Set source compatibility to Java 1.8
+        targetCompatibility = JavaVersion.VERSION_1_8  // Set target compatibility to Java 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8  // Kotlin JVM target set to Java 1.8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.Meetyfi"  // Unique application ID
+        minSdkVersion 23 // Minimum SDK version required by the app
+        targetSdk = flutter.targetSdkVersion  // Target SDK version defined by Flutter
+        versionCode = flutter.versionCode  // Version code defined by Flutter
+        versionName = flutter.versionName  // Version name defined by Flutter
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug  // Signing config for release builds
+        }
+    }
+}
+
+dependencies {
+    // Firebase BoM (Bill of Materials) to manage all Firebase SDK versions automatically
+    implementation platform('com.google.firebase:firebase-bom:33.5.1')  // You can use the latest Firebase BoM version
+
+    // Firebase libraries (no need to specify version, Firebase BoM handles it)
+    implementation 'com.google.firebase:firebase-auth'  // Firebase Authentication
+    implementation 'com.google.firebase:firebase-firestore'  // Firebase Firestore
+    implementation 'com.google.firebase:firebase-analytics'  // Firebase Analytics (if needed)
+
+    // Other dependencies (add your other app dependencies here)
+}
+
+apply plugin: 'com.google.gms.google-services'  // Apply the Google Services plugin to enable Firebase

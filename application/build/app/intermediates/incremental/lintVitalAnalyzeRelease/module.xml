@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="/Users/aaryanraj/meetyfi/android/app"
+    name=":app"
+    type="APP"
+    maven="android:app:"
+    agpVersion="8.1.0"
+    buildFolder="/Users/aaryanraj/meetyfi/build/app"
+    bootClassPath="/Users/aaryanraj/Library/Android/sdk/platforms/android-35/android.jar:/Users/aaryanraj/Library/Android/sdk/build-tools/33.0.1/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-35">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

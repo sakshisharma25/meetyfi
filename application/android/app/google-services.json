@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "742904616719",
+    "project_id": "Meetyfi-4984c",
+    "storage_bucket": "Meetyfi-4984c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742904616719:android:da9917d8780a995418d07a",
+        "android_client_info": {
+          "package_name": "com.example.Meetyfi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQyW--frzJRLf2BaAmikCOlCR1RUUN218"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

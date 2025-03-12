@@ -1,0 +1,4 @@
+#Thu Mar 06 13:02:30 IST 2025
+base.0=/Users/aaryanraj/meetyfi/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
